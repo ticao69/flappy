@@ -1,0 +1,90 @@
+/* Estilo geral do corpo */
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background-color: skyblue; /* Fundo azul para o céu */
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #70c5ce;
+    overflow: hidden; /* Para garantir que os tubos não saiam da tela */
+}
+
+/* Pássaro */
+.bird {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50vh; 
+    left: 10vw; 
+    transition: transform 0.2s;
+}
+
+.pipe_sprite {
+    position: absolute;
+    width: 5vw; /* Largura do tubo */
+    height: 20vh; /* Altura inicial do tubo */
+}
+.top {
+    transform: rotate(180deg); /* Inverte o tubo superior */
+}
+.bottom {
+    transform: none; /* Tubo inferior normal */
+}
+
+
+/* Mensagem de início ou fim */
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+/* Estilo específico para mensagens de erro ou fim */
+.messageStyle {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    animation: blink 1s infinite; /* Pisca para chamar atenção */
+}
+
+/* Animação de piscar */
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Título da pontuação */
+.score_title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Valor da pontuação */
+.score_val {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    font-size: 20px;
+    font-weight: bold;
+    color: yellow;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
